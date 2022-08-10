@@ -1,0 +1,9 @@
+.ListOfSpaceXLaunches--row {
+  display: grid;
+  /* flex-direction: row; */
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
