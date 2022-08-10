@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+a.active {
+  color: rgb(37 99 235);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

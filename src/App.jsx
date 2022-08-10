@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import {Home, Weather, Launches} from "./pages";
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/launches" element={<Launches />} />
       </Routes>
     </div>
   );
