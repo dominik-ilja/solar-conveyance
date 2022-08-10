@@ -1,0 +1,64 @@
+@use '../Styles/variables' as var;
+
+.hamburger {
+  border: 1px solid transparent;
+  height: 42px;
+  width: 42px;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__line {
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.5s;
+    
+    &--1{
+      width: 100%;
+      transform: translateY(-8px);
+    }
+    &--2{
+      width: 80%;
+      transform: scale(1);
+    }
+    &--3{
+      width: 90%;
+      transform: translateY(8px);
+      
+    }
+  }
+
+  &:hover {
+    .hamburger__line {
+      background-color: var.$color-primary;
+    }
+  }
+}
+
+.hamburger.open {
+  .hamburger__line {
+    width: 100%;
+    background-color: var.$color-primary;
+
+    &--1{
+      transform: translateY(0) rotate(135deg);
+    }
+    &--2{
+      transform: scale(0);
+    }
+    &--3{
+      transform: translateY(0) rotate(-135deg);
+
+    }
+  }
+}
+
