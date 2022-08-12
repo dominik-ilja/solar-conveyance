@@ -1,9 +1,7 @@
 const links = [
-  { text: 'Home', to: '/' },
-  { text: 'Weather', to: '/weather' },
-  { text: 'Launches', to: '/launches' },
-];
+  { text: "Home", to: "/" },
+  { text: "Weather", to: "/weather" },
+  { text: "Launches", to: "/launches" },
+]
 
-export {
-  links
-};
+export { links }
