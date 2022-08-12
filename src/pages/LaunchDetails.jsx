@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Spinner from "../components/Spinner";
-import Container from "../components/Container";
-import fetchLaunchDataById from '../constants/fetchLaunchDataById'
-import fetchRockeDataById from "../constants/fetchRocketsInfo";
-import fetchLaunchPadById from "../constants/fetchLaunchPadById";
-// import "../style/LaunchesDetails.css"
+import { Container, Spinner } from '../components'
+import { fetchLaunchDataById, fetchLaunchPadDataById, fetchRocketDataById } from "../constants"
 
 export default function LaunchDetails(props) {
   const [launchDetails, setLaunchDetails] = useState(null)
@@ -24,8 +20,8 @@ export default function LaunchDetails(props) {
   useEffect(() => {
     if (launchDetails) {
       async function fetchRocket() {
-        const rocketData = await fetchRockeDataById(launchDetails.rocket)
-        const launchpadData = await fetchLaunchPadById(launchDetails.launchpad)
+        const rocketData = await fetchRocketDataById(launchDetails.rocket)
+        const launchpadData = await fetchLaunchPadDataById(launchDetails.launchpad)
         setRocket(rocketData)
         setLaunchPad(launchpadData)
       }

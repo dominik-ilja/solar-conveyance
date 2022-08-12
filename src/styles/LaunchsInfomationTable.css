@@ -1,0 +1,9 @@
+.divided-rows-for-groups--Table {
+  text-align: start;
+  background-color: #9c0604;
+}
+.text-group-separator {
+  font-size: 34px;
+  /* padding: 20px;  */
+  font-weight: 500;
+}

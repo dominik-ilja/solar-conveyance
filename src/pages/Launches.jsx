@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
-import Container from "../components/Container";
-import LaunchCard from "../components/LaunchCard";
-import getSpacexData from "../constants/fetchSpacexDataLaunchData"
+import { Container, LaunchCard } from '../components'
+import { fetchSpaceXData } from "../constants"
 import '../styles/bg.scss'
 
 export default function UpcomingLaunches() {
@@ -11,11 +10,12 @@ export default function UpcomingLaunches() {
     //get the upcoming spacex launch dataa
     async function fetchData() {
       try {
-        const data = await getSpacexData()
+        const data = await fetchSpaceXData()
         const futureLaunches = data.filter(launch => new Date(launch.date_local) > new Date())
         setLaunches(futureLaunches)
       } catch (error) {
         console.log(error)
+        setLaunches([])
       }
     }
     fetchData()

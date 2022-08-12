@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react"
-import { Link, NavLink } from 'react-router-dom'
-import Logo from "./Logo";
-import Nav from "./Nav";
-import HamburgerMenu from "./HamburgerMenu";
-import Container from "./Container";
-import { links } from "../constants/constants";
+import { Link, NavLink } from "react-router-dom"
+import { Container, HamburgerMenu, Logo, Nav } from '../components'
+import { links } from "../constants"
 
 export default function Header(props) {
   // const [headerHeight, setHeaderHeight] = useState(0)
@@ -24,18 +21,16 @@ export default function Header(props) {
     }
 
     const handleResize = () => {
-      setIsActive(false);
-      setIsMobile(false);
+      setIsActive(false)
+      setIsMobile(false)
 
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener("resize", handleResize)
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize)
 
-    return () => window.removeEventListener('resize', handleResize)
-
+    return () => window.removeEventListener("resize", handleResize)
   }, [isActive])
-  
   function handleToggleClick(bool) {
     setIsActive(bool)
   }
@@ -49,8 +44,8 @@ export default function Header(props) {
       className="relative bg-black border-b-2 border-gray-600 border-solid"
     >
       <Container className="flex items-center justify-between">
-        <Link to='/'>
-          <Logo size='96px' className='fill-white' />
+        <Link to="/">
+          <Logo size="96px" className="fill-white" />
         </Link>
         <Nav
           className={`${isActive ? 'active' : ''} ${isActive || isMobile ? 'mobile' : ''}`}
@@ -73,5 +68,5 @@ export default function Header(props) {
         <HamburgerMenu active={isActive} lineClasses={'bg-white'} onClick={handleToggleClick} />
       </Container>
     </header>
-  );
-};
+  )
+}
