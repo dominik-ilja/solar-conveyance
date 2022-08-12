@@ -1,0 +1,9 @@
+.background1{
+    position: fixed;
+    background-color: rgba(24, 24, 33, 0.916);
+    height: 100%;
+    width: 100%;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-size: auto; */
+}
