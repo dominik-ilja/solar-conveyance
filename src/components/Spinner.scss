@@ -1,0 +1,17 @@
+@use "../styles/variables" as var;
+
+.spinner {
+  $-border-w: 4px;
+  $-size: 36px;
+  border: $-border-w solid var.$color-gray;
+  border-top: $-border-w solid var.$color-primary;
+  border-radius: 50%;
+  width: $-size;
+  height: $-size;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

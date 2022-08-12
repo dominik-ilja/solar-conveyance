@@ -4,7 +4,7 @@ import {Home, Weather, Launches} from "./pages";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-dark">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
