@@ -7,12 +7,12 @@ import Container from "./Container";
 import { links } from "../constants/constants";
 
 export default function Header(props) {
-  const [headerHeight, setHeaderHeight] = useState(0)
+  // const [headerHeight, setHeaderHeight] = useState(0)
   const [isActive, setIsActive] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
-    setHeaderHeight(document.getElementById('js-header').offsetHeight)
+    // setHeaderHeight(document.getElementById('js-header').offsetHeight)
   }, [])
   useEffect(() => {
     if (isActive) {
@@ -54,13 +54,13 @@ export default function Header(props) {
         </Link>
         <Nav
           className={`${isActive ? 'active' : ''} ${isActive || isMobile ? 'mobile' : ''}`}
-          style={{top: headerHeight + 'px'}}
+          // style={{top: headerHeight + 'px'}}
         >
-          <div className="flex flex-col gap-8 text-center md:flex-row">
+          <div className="flex flex-col justify-center h-full text-center gap-x-8 md:flex-row">
             {
               links.map(({ text, to }) => (
                 <NavLink
-                  className='text-5xl text-white transition-colors md:text-base hover:text-blue-600'
+                  className='py-4 text-5xl text-white transition-colors md:text-base hover:text-blue-600'
                   onClick={handleLinkClick}
                   key={text}
                   to={to}>
