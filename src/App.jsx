@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
-import Header from "./components/Header";
-import {Home, Weather, Launches, LaunchDetails} from "./pages";
+import { Header } from "./components";
+import { Home, Launches, LaunchDetails, NasaEpic} from "./pages";
+//import CountDown from "./components/CountDown"
 
 function App() {
   return (
@@ -8,12 +9,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/weather" element={<Weather />} />
         <Route path="/launches" element={<Launches />} />
         <Route path="/launches/:id" element={<LaunchDetails />} />
+        <Route path="/epic" element={<NasaEpic />} />
+        {/* <Route path="/countdown" element={<CountDown />} /> */}
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
