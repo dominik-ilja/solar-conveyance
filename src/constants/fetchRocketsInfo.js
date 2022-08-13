@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getRockeDataById = async (rocketid) => {
+const fetchRockeDataById = async (rocketid) => {
   try {
     const url = `https:api.spacexdata.com/v4/rockets/${rocketid}`;
     const res = await axios.get(url);
@@ -10,4 +10,4 @@ const getRockeDataById = async (rocketid) => {
   }
 };
 
-export default getRockeDataById;
+export default fetchRockeDataById;

@@ -21,6 +21,10 @@ export default function UpcomingLaunches() {
     fetchData()
   }, [])
 
+  function handleClick() {
+    window.scrollTo(0,0)
+  }
+
   return (
     <div className="page-bg">
       <Container className="py-8">
@@ -31,7 +35,7 @@ export default function UpcomingLaunches() {
         {
           launches.length > 0 &&
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {launches.map(launch => <LaunchCard launchData={launch} key={launch.flight_number} />)}
+            {launches.map(launch => <LaunchCard onClick={handleClick} launchData={launch} key={launch.flight_number} />)}
           </div>
         }
       </Container>
