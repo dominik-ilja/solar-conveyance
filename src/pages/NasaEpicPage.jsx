@@ -1,115 +1,123 @@
 import React, { useState, useEffect } from "react"
 import getDataForNASAEpicByDate from "../constants/fetcuDataForNASAEpicByDate"
+import "../styles/NasaEpicPage.css"
 
-import styled from "styled-components"
-// import { Splide, SplideSlide } from "@splidejs/react-splide"
-// import "@splidejs/react-splide/css"
 import { Link } from "react-router-dom"
+import PickDate from "../components/PickDate"
+import SlideImage from "../components/SlideImage"
 
 export default function NasaEpicPage() {
   const [epicData, setEpicData] = useState([])
-  const [date, setDate] = useState("2022-08-01")
+
+  // pick a default date
+  let defaultDate = new Date()
+  //set dafault Date to last month bacuse api no reponse to recent date such as 2022-08-12
+  defaultDate.setDate(1)
+  defaultDate.setMonth(defaultDate.getMonth() - 1)
+
+  const [pickDate, setPickDate] = useState(defaultDate)
   //initliase the data to the spicfic date 2022-08-01
 
+  //convert date to string and format yyyy-mm-dd for nasa epic api call
+  Date.prototype.yyyymmdd = function () {
+    let mm = this.getMonth() + 1 // getMonth() is zero-based
+    let dd = this.getDate()
+
+    return [
+      this.getFullYear(),
+      (mm > 9 ? "" : "0") + mm,
+      (dd > 9 ? "" : "0") + dd,
+    ].join("-")
+  }
+  Date.prototype.yyyymmdd2 = function () {
+    let mm = this.getMonth() + 1 // getMonth() is zero-based
+    let dd = this.getDate()
+
+    return [
+      this.getFullYear(),
+      (mm > 9 ? "" : "0") + mm,
+      (dd > 9 ? "" : "0") + dd,
+    ].join("/")
+  }
+
+  const [imageList, setImageList] = useState([])
   // async function  {
   //   const data = await getLanchDataById(date)
   //   setLaunchDetails(data)
   // }
+  //fatch data for image once the user enter the date
 
+  // console.log(pickDate.yyyymmdd2())
+
+  //change image splider each time user pick the date
   useEffect(() => {
     async function fetchDataForNASA() {
       try {
-        const res = await getDataForNASAEpicByDate(date)
+        const res = await getDataForNASAEpicByDate(pickDate.yyyymmdd())
         setEpicData(res)
-        console.log(epicData)
+
+        //get image url data and put into Array
+        const imageUrlList = res.map(
+          (obj) =>
+            `https://epic.gsfc.nasa.gov/archive/natural/${pickDate.yyyymmdd2()}/png/${
+              obj.image
+            }.png`
+        )
+
+        setImageList(imageUrlList)
+        console.log(imageList)
       } catch (error) {
         console.log(error)
       }
     }
-    getDataForNASAEpicByDate(date)
-  }, [date])
+    fetchDataForNASA()
+  }, [pickDate])
 
-  const image = [
-    "https://epic.gsfc.nasa.gov/archive/natural/2022/08/01/png/epic_1b_20220801020042.png",
-    "https://epic.gsfc.nasa.gov/archive/natural/2022/08/01/png/epic_1b_20220801020042.png",
-  ]
+  // useEffect(() => {
+  //   const imageUrlList = (epicData) => {
+  //     return epicData.map((obj) => obj.image)
+  //   }
+  //   imageUrlList()
+  //   setImageList(imageUrlList)
+  // }, [epicData])
+  //click to change slideshow image and infomation and set the big image to the click image
+  //default is the first image
+  //currentIndex is control current Image Infomation
+  const [currentImage, setCurrentImage] = useState(imageList[0])
+  const [currentIndex, setcurrentIndex] = useState(0)
+  function handleOnClick(imgUrl, index) {
+    console.log(imgUrl, index)
+    setCurrentImage(imgUrl)
+    setcurrentIndex(index)
+  }
+
+  //if there is no data or wating for axios reponse then set context to Loading page
+  if (epicData.length === 0 || imageList.length === 0) {
+    return <h1>Loading data</h1>
+  }
 
   return (
-    <h1>no splide yet</h1>
-    // <Wrapper>
-    //   <h3>Nasa Eipic</h3>
-
-    //   <Splide
-    //     options={{
-    //       perPage: 1,
-    //       arrows: true,
-    //       pagination: false,
-    //       drag: "free",
-    //       gap: "1rem",
-
-    //       breakpoints: {
-    //         640: {
-    //           perPage: 1,
-    //         },
-    //       },
-    //     }}
-    //   >
-    //     {image.map((pic) => {
-    //       return (
-    //         <SplideSlide key={pic}>
-    //           <Card>
-    //             {/* <Gradient> */}
-    //             <p>image</p>
-    //             <img src={pic} />
-    //             {/* </Gradient> */}
-    //           </Card>
-    //         </SplideSlide>
-    //       )
-    //     })}
-    //   </Splide>
-    // </Wrapper>
+    <>
+      <div className="Container--Body">
+        <div className="Container--ImageInfomation">
+          <h1>Image Information</h1>
+          <p>Image Name: {epicData[currentIndex].image}</p>
+          <p>Processing Version:{epicData[currentIndex].version}</p>
+          <p>Description:{epicData[currentIndex].caption}</p>
+          <p>Image Date:{pickDate.yyyymmdd2()}</p>
+          <h1>Slideshow </h1>
+          <p>
+            Showing: {currentIndex + 1} of {imageList.length}
+          </p>
+          <PickDate pickDate={pickDate} setPickDate={setPickDate} />
+        </div>
+        <div className="Container--BigImage">
+          <img src={currentImage || imageList[0]} alt="nasa epic image" />
+        </div>
+      </div>
+      <div ClassName="Container--slide">
+        <SlideImage imageList={imageList} handleOnClick={handleOnClick} />
+      </div>
+    </>
   )
 }
-
-const Wrapper = styled.div`
-  margin: 2rem 0rem;
-  /* background: black; */
-`
-const Card = styled.div`
-  height: 100vh;
-  border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
-  img {
-    border-radius: 2rem;
-    /* position: absolute; */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  p {
-    position: absolute;
-    z-index: 10;
-    left: 50%;
-    bottom: 0%;
-    transform: translate(-50%, 0%);
-    color: white;
-    width: 100%;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`
-
-// const Gradient = styled.div`
-//   z-index: 3;
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-// `

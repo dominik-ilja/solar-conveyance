@@ -7,3 +7,7 @@
   /* padding: 20px;  */
   font-weight: 500;
 }
+.Container--CountDown {
+  height: 19rem;
+  background-color: #edf2f7;
+}

@@ -1,0 +1,22 @@
+.Container--Body {
+  display: flex;
+  flex-direction: row;
+}
+
+.Container--ImageInfomation {
+  background-color: #f04328;
+  width: 20%;
+  margin: 1rem 5rem;
+  height: 20%;
+}
+
+.Container--BigImage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+img {
+  width: 25rem;
+}

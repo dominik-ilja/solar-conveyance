@@ -2,6 +2,7 @@ import getRockeDataById from "../constants/fetchRocketsInfo"
 import React, { useState, useEffect } from "react"
 import "../styles/LaunchsInfomationTable.css"
 import getLanchPadById from "../constants/fetchLanchPadById"
+import CountDown from "./CountDown"
 
 export default function LaunchsInfomationTable({ launchDetails }) {
   // console.log(launchDetails.links.patch)
@@ -16,6 +17,16 @@ export default function LaunchsInfomationTable({ launchDetails }) {
   //   day: launchDetails.date_local.split("-")[2].split("T")[0],
   //   time: launchDetails.date_local.split("-")[2].split("T")[1],
   // }
+  // console.log(launchDetails[0].date_local)
+  // const launchDate = {
+  //   year: launchData.date_local.split("-")[0],
+  //   month: launchData.date_local.split("-")[1],
+  //   day: launchData.date_local.split("-")[2].split("T")[0],
+  //   time: launchData.date_local.split("-")[2].split("T")[1],
+  // }
+  // const launchTime = `${launchDate.day}/${launchDate.month}/${launchDate.year}`
+  // console.log(launchTime)
+
   const [launchpadID, setLaunchpadID] = useState(launchDetails.launchpad)
 
   const [launchpadInfo, setLaunchpadInfo] = useState()
@@ -50,8 +61,7 @@ export default function LaunchsInfomationTable({ launchDetails }) {
   }, [launchpadID])
 
   if (launchpadInfo === undefined || rocketInfo === undefined) {
-    console.log(rocketInfo)
-    return <h1>loading</h1>
+    return <h1>loading data</h1>
   }
 
   return (
@@ -64,6 +74,7 @@ export default function LaunchsInfomationTable({ launchDetails }) {
           Launch details and Rocket details.
         </p>
       </div>
+
       <div className="border-t border-gray-200">
         <dl>
           <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -71,6 +82,9 @@ export default function LaunchsInfomationTable({ launchDetails }) {
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               {launchDetails.name}
             </dd>
+          </div>
+          <div className="Container--CountDown">
+            {/* <CountDown launchTime={launchTime} /> */}
           </div>
           <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">Flight Number</dt>
