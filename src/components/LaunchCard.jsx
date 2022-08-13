@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
-import getRockeDataById from "../constants/fetchRocketsInfo"
+import { Link } from "react-router-dom"
+import fetchRockeDataById from "../constants/fetchRocketsInfo"
 import ImageElement from "./ImageElement"
 import Spinner from "./Spinner"
 
-export default function LaunchCard ({ launchData }) {
+export default function LaunchCard ({ launchData, ...props }) {
   const [rocket, setRocket] = useState(null)
   const launchDate = {
     year: launchData.date_local.split("-")[0],
@@ -28,7 +29,7 @@ export default function LaunchCard ({ launchData }) {
     //get rocket image info from api by rocket ID
     async function fetchDataForRocket() {
       try {
-        const data = await getRockeDataById(launchData.rocket)
+        const data = await fetchRockeDataById(launchData.rocket)
         setRocket(data)
       } catch (error) {
         console.log(error)
@@ -62,9 +63,16 @@ export default function LaunchCard ({ launchData }) {
         </ul>
       </div>
   
-      <button className="w-full py-4 text-white transition-colors bg-blue-600 hover:bg-blue-400 focus:bg-blue-400">
-        View Details
-      </button>
+      {
+        rocket ?
+          <Link
+            to={`/launches/${launchData.id}`}
+            onClick={props.onClick}
+            className="w-full py-4 text-center text-white transition-colors bg-blue-600 hover:bg-blue-400 focus:bg-blue-400">
+            View Details
+          </Link> :
+          <Spinner />
+      }
 
     </div>
   )
