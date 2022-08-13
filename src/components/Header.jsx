@@ -6,26 +6,21 @@ import HamburgerMenu from "./HamburgerMenu";
 import Container from "./Container";
 import { links } from "../constants/constants";
 
-const mappedLinks = links.map(({ text, to }) => {
-  return <NavLink
-          className='text-5xl text-white transition-colors md:text-base hover:text-blue-600'
-          key={text}
-          to={to}>
-          {text}
-        </NavLink>;
-})
-
 export default function Header(props) {
-  const [headerHeight, setHeaderHeight] = useState(0)
+  // const [headerHeight, setHeaderHeight] = useState(0)
   const [isActive, setIsActive] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
-    setHeaderHeight(document.getElementById('js-header').offsetHeight)
+    // setHeaderHeight(document.getElementById('js-header').offsetHeight)
   }, [])
   useEffect(() => {
     if (isActive) {
+      document.body.style.overflowY = 'hidden';
       setIsMobile(true)
+    }
+    else {
+      document.body.style.overflowY = '';
     }
 
     const handleResize = () => {
@@ -41,8 +36,11 @@ export default function Header(props) {
 
   }, [isActive])
   
-  function handleClick(bool) {
+  function handleToggleClick(bool) {
     setIsActive(bool)
+  }
+  function handleLinkClick() {
+    setIsActive(false)
   }
 
   return (
@@ -56,13 +54,23 @@ export default function Header(props) {
         </Link>
         <Nav
           className={`${isActive ? 'active' : ''} ${isActive || isMobile ? 'mobile' : ''}`}
-          style={{top: headerHeight + 'px'}}
+          // style={{top: headerHeight + 'px'}}
         >
-          <div className="flex flex-col gap-8 text-center md:flex-row">
-            {mappedLinks}
+          <div className="flex flex-col justify-center h-full text-center gap-x-8 md:flex-row">
+            {
+              links.map(({ text, to }) => (
+                <NavLink
+                  className='py-4 text-5xl text-white transition-colors md:text-base hover:text-blue-600'
+                  onClick={handleLinkClick}
+                  key={text}
+                  to={to}>
+                  {text}
+                </NavLink>
+              ))
+            }
           </div>
         </Nav>
-        <HamburgerMenu active={isActive} lineClasses={'bg-white'} onClick={handleClick} />
+        <HamburgerMenu active={isActive} lineClasses={'bg-white'} onClick={handleToggleClick} />
       </Container>
     </header>
   );
