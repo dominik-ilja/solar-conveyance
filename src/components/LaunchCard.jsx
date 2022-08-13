@@ -17,11 +17,11 @@ export default function LaunchCard ({ launchData, ...props }) {
     { name: "Launch Date:", data: launch },
     { name: "Local Time:", data: launchDate.time },
   ].map((detail) => (
-    <>
+    <React.Fragment key={detail.data} >
       <span className="text-left">{detail.name}</span>
       <span className=" h-[2px] bg-gray-600"></span>
       <span className="text-right">{detail.data}</span>
-    </>
+    </React.Fragment>
   ))
 
   useEffect(() => {

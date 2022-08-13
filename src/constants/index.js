@@ -1,11 +1,16 @@
 import axios from "axios";
 
+// Represents the navigation links used across the website
+
 const links = [
-  { text: "Epic", to: "/epic" },
   { text: "Home", to: "/" },
+  { text: "Epic", to: "/epic" },
   { text: "Launches", to: "/launches" },
-  { text: "Weather", to: "/weather" },
+  // { text: "Weather", to: "/weather" },
 ];
+
+
+// Various Fetch Functions
 
 async function fetchLaunchDataById(id) {
   try {
@@ -52,6 +57,8 @@ async function fetchSpaceXData() {
     return null;
   }
 }
+
+// ! The date format must be => "yyyy-mm-dd"
 async function fetchNasaEpicDataByDate(date) {
   try {
     const url = `https://epic.gsfc.nasa.gov/api/natural/date/${date}`;
