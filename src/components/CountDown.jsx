@@ -45,8 +45,7 @@ function CountDown({ countDownDate }) {
       return interval
     }
     
-    // startTimer returns the interval id to allow for the interval to be cleared
-    return clearInterval(startTimer())
+    startTimer();
   }, [countDownDate])
   
   return (
