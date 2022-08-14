@@ -6,7 +6,6 @@
 
 .page2{
     position: fixed;
-    /* background-color: rgb(79, 63, 63); */
 }
 
 .title{
@@ -14,13 +13,20 @@
     font-size: 16px;
 }
 
+.titleAndPhoto{
+    width: 1000px;
+    /* border: red 2px solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .imageOfTheDay {
-    height: 60vh;
-    width: 40vw;
+    height: 40vh;
+    width: auto;
     position: relative;
     bottom: 40px;
     border: rgb(208, 208, 208) solid 2px;
-
 }
 
 .titlePhotoOfTheDay{
@@ -34,13 +40,14 @@
 }
 
 .imageOfTheDayBox {
+    width: 60vw;
     position:absolute;
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    right: 1.5em
+    right: 1.5em;
 }
 
 .description{
@@ -57,16 +64,17 @@
     align-items: center;
     text-align: center;
     overflow-y: auto;
-    height: 20rem;
-    color: rgb(208, 208, 208)
+    /* height: 20rem; */
+    color: rgb(24, 24, 33, 0.916)
 }
 
 .card {
     position: relative;
-    bottom: 25px;
+    /* bottom: 25px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* height: 800px; */
 }
 
 .card p{
@@ -122,7 +130,7 @@
     height: 15vh;
     width: 10vw;
     left: 14rem;
-    top: 28rem;
+    top: 25rem;
     border: rgb(208, 208, 208) solid 2px;
 }
 .frontOfMarsPhoto2{
@@ -130,7 +138,7 @@
     height: 15vh;
     width: 10vw;
     left: 14rem;
-    top: 28rem;
+    top: 25rem;
     background: url(../assets/noise.jpg);
     animation: static .3s linear infinite;
     opacity: .19;
@@ -140,7 +148,7 @@
     height: 15vh;
     width: 10vw;
     left: 14rem;
-    top: 28rem;
+    top: 25rem;
     background-color: rgba(202, 202, 202, 0.378);
 }
 
@@ -209,8 +217,6 @@
     opacity: .30;
 }
 
-
-
 @keyframes animateMars2 {
     0% {
         background-position: 0 0;
@@ -229,331 +235,149 @@
     }
   }
 
-
-/* iPad Air */
-@media screen and (max-width: 820px){
-
-    
-    .marsPhoto {
-        position: absolute;
-        height: 20vh;
-        width: 30vw;
-        bottom: 20rem;
-        left: 30rem;
-    }
-    .frontOfMarsPhoto{
-        position: absolute;
-        height: 20vh;
-        width: 30vw;
-        bottom: 20rem;
-        left: 30rem;
-    }
-    
-    .marsPhoto2 {
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 20rem;
-        top: 50rem;
-    }
-    .frontOfMarsPhoto2{
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 20rem;
-        top: 50rem;
-    }
-    .nightLight2{
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 20rem;
-        top: 50rem;
-    }
-    
-    .marsPhoto3 {
-        position: absolute;
-        height: 18vh;
-        width: 23vw;
-        left: 17rem;
-        top: 31rem;
-    }
-    .frontOfMarsPhoto3{
-        position: absolute;
-        height: 18vh;
-        width: 23vw;
-        left: 17rem;
-        top: 31rem;
-    }
-    
-    .marsPhoto4 {
-        position: absolute;
-        height: 15vh;
-        width: 20vw;
-        left: 7rem;
-        bottom: 7rem;
-    }
-    .frontOfMarsPhoto4{
-        position: absolute;
-        height: 15vh;
-        width: 20vw;
-        left: 7rem;
-        bottom: 7rem;
-    }
-    .nightLight4{
-        position: absolute;
-        height: 15vh;
-        width: 20vw;
-        left: 7rem;
-        bottom: 7rem;
-    }
-    
-    .marsPhoto5 {
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 3rem;
-        top: 28rem;
-    }
-    .frontOfMarsPhoto5{
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 3rem;
-        top: 28rem;
-    }
-    
-    
-    
-    @keyframes animateMars2 {
-        0% {
-            background-position: 0 0;
-        }
-        100% {
-            background-position: 184.5%, 0;
-        }
-    }
-
-
-
-
-
-    .mars2 {
-        width: 600px;
-        height: 600px;
-        left: -16rem;
-        top: 30rem
-    }
-    .card{
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 20px;
-        padding: 10px;        
-    }
-    .imageOfTheDay {
-        height: 30vh;
-        width: auto;
-
-    }
-    .description {
+  @media screen and (max-width: 1600px){
+    .titleAndDescription{
         width: 400px;
-        height: 250px;
+        height: 200px;
+        overflow-x: auto;
     }
-    .imageOfTheDayBox{
-        bottom: 41rem;
-        left: 0rem;
-        height: 500px;
-        width: 100vw;
-        /* border: red solid 3px; */
-        gap: 5px;
+    .description{
+        width: 390px;
     }
- 
-    .titleAndPhoto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .imageOfTheDayBox {
+        width: 40vw;
     }
-    .titlePhotoOfTheDay{
-        font-size: 30px;
-        position: relative;
-        bottom: 40px;
-        font-weight: bold;
-        padding-bottom: .5rem;
-    }
+  }
+
+  @media screen and (max-height: 950px){
     .titleAndDescription{
-        position: relative;
-        bottom: 45px;
-        overflow-y: auto;
+        width: 400px;
+        height: 200px;
+        overflow-x: auto;
     }
-}
+    .description{
+        width: 390px;
+    }
+    .imageOfTheDayBox {
+        width: 40vw;
+    }
+  }
 
-
-/* iPhone 12 Pro */
-@media screen and (max-width: 390px){
-
-    
+  @media screen and (max-width: 1200px){
+    .imageOfTheDayBox {
+        width: 100vw;
+        height: 100vh;
+        /* border: green solid 2px; */
+        left: 0px;
+    }
     .marsPhoto {
-        height: 15vh;
-        width: 30vw;
-        bottom: 22rem;
-        left: 10rem;
+        opacity: 0;
     }
     .frontOfMarsPhoto{
-        height: 15vh;
-        width: 30vw;
-        bottom: 22rem;
-        left: 10rem;
+        opacity: 0;
     }
     
     .marsPhoto2 {
-        height: 15vh;
-        width: 30vw;
-        bottom: 0rem;
-        left: 0rem;
+        opacity: 0;
     }
     .frontOfMarsPhoto2{
-        height: 15vh;
-        width: 30vw;
-        bottom: -10rem;
-        left: 10rem;
+        opacity: 0;
     }
     .nightLight2{
-        position: absolute;
-        height: 10vh;
-        width: 15vw;
-        left: 20rem;
-        top: 50rem;
+        opacity: 0;
     }
     
     .marsPhoto3 {
-        height: 12vh;
-        width: 23vw;
-        left: 13rem;
-        top: 35rem;
+        opacity: 0;
     }
     .frontOfMarsPhoto3{
-        height: 12vh;
-        width: 23vw;
-        left: 13rem;
-        top: 35rem;
+        opacity: 0;
     }
     
     .marsPhoto4 {
-        height: 13vh;
-        width: 24vw;
-        left: 5rem;
-        bottom: 7rem;
+        opacity: 0;
     }
     .frontOfMarsPhoto4{
-        height: 13vh;
-        width: 24vw;
-        left: 5rem;
-        bottom: 7rem;
+        opacity: 0;
     }
     .nightLight4{
-        height: 13vh;
-        width: 24vw;
-        left: 5rem;
-        bottom: 7rem;
+        opacity: 0;
     }
     
     .marsPhoto5 {
-        height: 10vh;
-        width: 15vw;
-        left: 3rem;
-        top: 20rem;
+        opacity: 0;
     }
     .frontOfMarsPhoto5{
-        height: 10vh;
-        width: 15vw;
-        left: 3rem;
-        top: 20rem;
+        opacity: 0;
+    }
+  }
+
+
+  @media screen and (max-height: 875px){
+    .imageOfTheDayBox {
+        width: 100vw;
+        height: 100vh;
+        /* border: green solid 2px; */
+        left: 0px;
+    }
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
     }
     
-    
-    
-    @keyframes animateMars2 {
-        0% {
-            background-position: 0 0;
-        }
-        100% {
-            background-position: 184.5%, 0;
-        }
+    .marsPhoto2 {
+        opacity: 0;
     }
-
-
-
-
-
-    .mars2 {
-        width: 450px;
-        height: 450px;
-        left: -10rem;
-        top: 20rem
+    .frontOfMarsPhoto2{
+        opacity: 0;
     }
-    .card{
-        gap: 15px;
-        width: 100%;
-    }
-    .imageOfTheDay {
-        height: 30vh;
-        width: auto;
-    }
-    .description {
-        width: 180px;
-        height: 200px;
-    }
-    .imageOfTheDayBox{
-        bottom: 36.5rem;
-        height: 5rem;
-    }
-
-    .titlePhotoOfTheDay{
-        font-size: 26px;
+    .nightLight2{
+        opacity: 0;
     }
     
-    .titleAndDescription{
-        bottom: 40px;
-        height: 16rem;
-    }
-}
-
-@media screen and (max-width: 1450px) and (min-width: 1250px){
-    .titleAndDescription{
-        width: 31rem;
-        height: 18rem;
-        overflow-y: auto;
-    }
-    .description{
-        width: 30rem;
-    }
-}
-
-@media screen and (max-width: 1249px) and (min-width: 821px){
-    .imageOfTheDay{
-        height: 15rem;
-        width: auto;
-    }
-
-    .description{
-        width: 20rem;
-        
-    }
-
-    .titleAndDescription{
-        height: 15rem;
-    }
-    
-    .card{
-        bottom: 27.5rem;
-        /* border: red solid 2px; */
-        height: 15rem;
-    }
-
-    .marsPhoto3{
+    .marsPhoto3 {
         opacity: 0;
     }
     .frontOfMarsPhoto3{
         opacity: 0;
     }
-}
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    .titleAndDescription{
+        width: 200px;
+        height: 100px;
+    }
+    .description{
+        width: 180px;
+    }
+  }
+
+  @media screen and (max-height: 500px){
+    .titleAndDescription{
+        width: 200px;
+        height: 100px;
+    }
+    .description{
+        width: 180px;
+    }
+  }
