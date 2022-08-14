@@ -1,4 +1,5 @@
 import Container from "./Container";
+import CountDown from "./CountDown";
 import HamburgerMenu from "./HamburgerMenu";
 import Header from "./Header";
 import ImageElement from "./ImageElement";
@@ -11,6 +12,7 @@ import Spinner from "./Spinner";
 
 export {
   Container,
+  CountDown,
   HamburgerMenu,
   Header,
   ImageElement,

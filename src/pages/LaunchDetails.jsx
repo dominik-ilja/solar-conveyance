@@ -12,7 +12,6 @@ export default function LaunchDetails(props) {
   const [launchDetails, setLaunchDetails] = useState(null)
   const [rocket, setRocket] = useState(null)
   const [launchPad, setLaunchPad] = useState(null)
-  console.log(launchDetails)
   const { id } = useParams()
   const [countDownDate, setCountDownDate] = useState(null)
 
@@ -20,23 +19,19 @@ export default function LaunchDetails(props) {
     async function fetchDetails() {
       const data = await fetchLaunchDataById(id)
       setLaunchDetails(data)
-      console.log(data)
       setCountDownDate(data.date_local)
-      console.log(countDownDate)
     }
     fetchDetails()
-  }, [id])
+  }, [id, countDownDate])
   useEffect(() => {
     if (launchDetails) {
       async function fetchRocket() {
-        const rocketData = await fetchRocketDataById(launchDetails.rocket)
-        const launchpadData = await fetchLaunchPadDataById(
-          launchDetails.launchpad
-        )
-        setRocket(rocketData)
-        setLaunchPad(launchpadData)
+        const rocketData = await fetchRocketDataById(launchDetails.rocket);
+        const launchpadData = await fetchLaunchPadDataById(launchDetails.launchpad);
+        setRocket(rocketData);
+        setLaunchPad(launchpadData);
       }
-      fetchRocket()
+      fetchRocket();
     }
   }, [launchDetails])
 
