@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Intro.css'
+import './IntroiPhone.css'
+import './IntroiPad.css'
 import { motion, AnimatePresence } from "framer-motion"
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
@@ -101,8 +103,6 @@ export default function Intro() {
                   frameBorder="0"
                   allow="encrypted-media"
                   allowFullScreen 
-                  width={480}
-                  height={272}
                   />
                 }
             </motion.div>

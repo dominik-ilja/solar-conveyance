@@ -1,0 +1,720 @@
+/* iPhone 12 Pro */
+@media screen and (max-width: 390px) and (min-width: 390px){
+
+    
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 20rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 375px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+/* iPhone XR */
+@media screen and (max-width: 414px) and (min-width: 414px){
+
+    
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 23rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 90px;
+        height: 425px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+/* iPhone SE */
+@media screen and (max-width: 375px) and (min-width: 375px){
+
+    
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 18rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 275px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+/* Pixel 5 */
+@media screen and (max-width: 393px) and (min-width: 393px){
+
+    
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 22rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 400px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+
+/* amsung Galaxy S8+ */
+@media screen and (max-width: 360px) and (min-width: 360px){
+
+    
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 18rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 300px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 13px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+
+/* Samsung Galaxy S20 Ultra */
+@media screen and (max-width: 412px) and (min-width: 412px){
+ 
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 26rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 400px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+
+/* Samsung Galaxy S20 Ultra */
+@media screen and (max-width: 540px) and (min-width: 540px){
+ 
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 450px;
+        height: 450px;
+        left: -10rem;
+        top: 17rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: auto;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 300px;
+        width: 300px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
+
+
+/* Galaxy Fold */
+@media screen and (max-width: 280px) and (min-width: 280px){
+ 
+    .marsPhoto {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto{
+        opacity: 0;
+    }
+    
+    .marsPhoto2 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto2{
+        opacity: 0;
+    }
+    .nightLight2{
+        opacity: 0;
+    }
+    
+    .marsPhoto3 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto3{
+        opacity: 0;
+    }
+    
+    .marsPhoto4 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto4{
+        opacity: 0;
+    }
+    .nightLight4{
+        opacity: 0;
+    }
+    
+    .marsPhoto5 {
+        opacity: 0;
+    }
+    .frontOfMarsPhoto5{
+        opacity: 0;
+    }
+    
+    .mars2 {
+        width: 300px;
+        height: 300px;
+        left: -7rem;
+        top: 20rem
+    }
+    .card{
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .imageOfTheDay {
+        height: 30vh;
+        width: 250px;
+        bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .titlePhotoOfTheDay{
+        font-size: 26px;
+        padding-bottom: 0rem;
+        bottom: 7px;
+    }
+    
+    .titleAndDescription{
+        position: relative;
+        top: 75px;
+        height: 250px;
+        width: 250px;
+    }
+    .titleAndPhoto{
+        position: absolute;
+        height: auto;
+        padding-top: 0px;
+        top: 20px;
+    }
+    .description{
+        width: auto;
+    }
+}
