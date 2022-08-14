@@ -59,5 +59,6 @@ export default function LaunchCard ({ launchData, ...props }) {
             <Spinner />
         }
       </div>
+
   )
 }
