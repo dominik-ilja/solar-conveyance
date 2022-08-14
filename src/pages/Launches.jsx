@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Container, LaunchCard } from '../components'
 import { fetchSpaceXData } from "../constants"
-import '../styles/bg.scss'
 
 export default function UpcomingLaunches() {
   const [launches, setLaunches] = useState([])
@@ -26,7 +25,6 @@ export default function UpcomingLaunches() {
   }
 
   return (
-    <div className="page-bg">
       <Container className="py-8">
         <div className="flex flex-col gap-4 mb-12 text-center">
           <h1 className="text-5xl text-white">Upcoming SpaceX Launches</h1>
@@ -39,6 +37,5 @@ export default function UpcomingLaunches() {
           </div>
         }
       </Container>
-    </div>
   )
 }
