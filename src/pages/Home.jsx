@@ -1,6 +1,6 @@
-import Background from "../kevin/Background";
-import ColorBack from "../kevin/ColorBack";
-import Intro from "../kevin/Intro";
+import Background from "../kevin/Background"
+import ColorBack from "../kevin/ColorBack"
+import Intro from "../kevin/Intro"
 
 export default function Home(props) {
   return (
@@ -9,5 +9,5 @@ export default function Home(props) {
       <Background />
       <Intro />
     </div>
-  );
-};
+  )
+}

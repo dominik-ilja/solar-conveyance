@@ -3,16 +3,16 @@ import React, { useState, useEffect } from "react"
 import Clock from "./Clock"
 import "../styles/Countdown.scss"
 
-function CountDown() {
+function CountDown({ countDownDate }) {
   const [setDays, setDaysState] = useState()
   const [setHours, setHoursState] = useState()
   const [setMinutes, setMinutesState] = useState()
   const [setSeconds, setSecondsState] = useState()
-
+  console.log(setDays)
   let interval
 
   const startTimer = () => {
-    const countDown = new Date("Jully 4, 2024").getTime()
+    const countDown = new Date(countDownDate)
 
     interval = setInterval(() => {
       const nowDate = new Date().getTime()
@@ -46,7 +46,8 @@ function CountDown() {
   // now we need to load the timer when the page loads
   useEffect(() => {
     startTimer()
-  })
+    // return clearInterval(interval)  //do we need to clear the interval before close the components??
+  }, [])
   return (
     <div className="Container--CountDown">
       <Clock

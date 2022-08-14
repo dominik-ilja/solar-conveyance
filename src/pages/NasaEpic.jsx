@@ -21,7 +21,7 @@ export default function NasaEpic() {
         const images = res.map(({image}) => {
           const base = 'https://epic.gsfc.nasa.gov/archive/natural/';
           const endpoint =`${formatYYYYMMDD(date, '/')}/png/${image}.png`
-          return base + endpoint;
+          return base + endpoint; 
         })
         setEpicData(res)
         setImageList(images)
