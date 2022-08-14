@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { fetchNasaEpicDataByDate } from "../constants"
-import { Spinner, PickDate, ImageSlider, Container } from "../components";
+import { Spinner, ImageSlider, Container } from "../components";
 import { formatYYYYMMDD } from "../helpers/formatDates";
 
 const defaultDate = new Date();
@@ -20,7 +20,7 @@ export default function NasaEpic() {
         const res = await fetchNasaEpicDataByDate(formatYYYYMMDD(date))
         const images = res.map(({image}) => {
           const base = 'https://epic.gsfc.nasa.gov/archive/natural/';
-          const endpoint =`${formatYYYYMMDD(date, '/')}/png/${image}.png`
+          const endpoint = `${formatYYYYMMDD(date, '/')}/png/${image}.png`;
           return base + endpoint; 
         })
         setEpicData(res)
@@ -43,7 +43,6 @@ export default function NasaEpic() {
   else {
     return (
       <Container className="mt-16">
-        {/*  */}
         <div className="grid items-center md:grid-cols-[2fr_3fr] gap-16 text-white mb-16">
           <div className="">
             <h1 className="px-2 py-4 mb-8 text-3xl text-center bg-blue-600">Image Information</h1>
@@ -73,7 +72,6 @@ export default function NasaEpic() {
           </div>
         </div>
 
-        {/*  */}
         <div>
           <ImageSlider images={imageList} handleOnClick={handleImageClick} />
         </div>

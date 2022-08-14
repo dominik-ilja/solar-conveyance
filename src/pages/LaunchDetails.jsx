@@ -12,7 +12,6 @@ export default function LaunchDetails(props) {
   const [launchDetails, setLaunchDetails] = useState(null)
   const [rocket, setRocket] = useState(null)
   const [launchPad, setLaunchPad] = useState(null)
-  console.log(launchDetails)
   const { id } = useParams()
   const [countDownDate, setCountDownDate] = useState(null)
 
@@ -20,23 +19,19 @@ export default function LaunchDetails(props) {
     async function fetchDetails() {
       const data = await fetchLaunchDataById(id)
       setLaunchDetails(data)
-      console.log(data)
       setCountDownDate(data.date_local)
-      console.log(countDownDate)
     }
     fetchDetails()
-  }, [id])
+  }, [id, countDownDate])
   useEffect(() => {
     if (launchDetails) {
       async function fetchRocket() {
-        const rocketData = await fetchRocketDataById(launchDetails.rocket)
-        const launchpadData = await fetchLaunchPadDataById(
-          launchDetails.launchpad
-        )
-        setRocket(rocketData)
-        setLaunchPad(launchpadData)
+        const rocketData = await fetchRocketDataById(launchDetails.rocket);
+        const launchpadData = await fetchLaunchPadDataById(launchDetails.launchpad);
+        setRocket(rocketData);
+        setLaunchPad(launchpadData);
       }
-      fetchRocket()
+      fetchRocket();
     }
   }, [launchDetails])
 
@@ -129,7 +124,7 @@ export default function LaunchDetails(props) {
           <h1 className="p-4 mb-6 text-4xl text-center bg-blue-600">
             Launch Pad Information
           </h1>
-          <dl className="grid grid-cols-2 gap-y-6">
+          <dl className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-2 gap-y-6">
             <dt className="text-gray-500">Name</dt>
             <dd>{launchPad ? launchPad.full_name : <Spinner />}</dd>
             <dt className="text-gray-500">About</dt>
