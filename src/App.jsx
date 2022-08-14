@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router";
-import { Header } from "./components";
-import { Home, Launches, LaunchDetails, NasaEpic} from "./pages";
-//import CountDown from "./components/CountDown"
+import { Routes, Route } from "react-router"
+import { Header } from "./components"
+import { Home, Launches, LaunchDetails, NasaEpic } from "./pages"
+//? import CountDown from "./components/CountDown"
 
 function App() {
   return (
@@ -12,7 +12,6 @@ function App() {
         <Route path="/launches" element={<Launches />} />
         <Route path="/launches/:id" element={<LaunchDetails />} />
         <Route path="/epic" element={<NasaEpic />} />
-        {/* <Route path="/countdown" element={<CountDown />} /> */}
       </Routes>
     </div>
   )
