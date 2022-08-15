@@ -60,3 +60,12 @@ NASA:https://api.nasa.gov/
 <br />
 
 <img align="top" width='48%' src="./wireframes/mobile-menu-open.png">
+
+# Contributions
+
+Dominik 
+- Navbar
+- Styling and code cleanup for EPIC, Launches, and Launch Detail pages
+- Resolving merge conflicts
+- Project direction
+
