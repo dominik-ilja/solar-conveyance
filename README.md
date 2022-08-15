@@ -72,3 +72,10 @@ Dominik
 Kevin
 - Created functionality and styling for Homepage
 - Styled 404 page
+
+Linfeng Chen
+-Dealing with SpaceX API, NASA API
+-Epic page
+-Launch page
+-Launch Details page
+-No match page
