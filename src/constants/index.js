@@ -38,7 +38,7 @@ async function fetchLaunchPadDataById(id) {
 }
 async function fetchRocketDataById(rocketid) {
   try {
-    const url = `https:api.spacexdata.com/v4/rockets/${rocketid}`;
+    const url = `https://api.spacexdata.com/v4/rockets/${rocketid}`;
     const res = await axios.get(url);
     return res.data;
   } catch (error) {
