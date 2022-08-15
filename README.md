@@ -69,3 +69,6 @@ Dominik
 - Resolving merge conflicts
 - Project direction
 
+Kevin
+- Created functionality and styling for Homepage
+- Styled 404 page
