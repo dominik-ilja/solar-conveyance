@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router"
 import { Header } from "./components"
-import { Home, Launches, LaunchDetails, NasaEpic } from "./pages"
-import CountDown from "./components/CountDown"
-import Nomatch from "./pages/Nomatch"
+import { Home, Launches, LaunchDetails, NasaEpic, Nomatch } from "./pages"
 
 function App() {
   return (
