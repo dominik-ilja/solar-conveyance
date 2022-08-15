@@ -70,8 +70,8 @@ Dominik
 - Project direction
 
 Linfeng Chen
--Dealing with SpaceX API, NASA API
--Epic page
--Launch page
--Launch Details page
--No match page
+- Dealing with SpaceX API, NASA API
+- Epic page
+- Launch page
+- Launch Details page
+- No match page
