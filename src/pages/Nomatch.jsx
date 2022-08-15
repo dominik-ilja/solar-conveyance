@@ -1,11 +1,13 @@
 import React from "react"
 import "../styles/NoMatch.css"
+import Background from '../kevin/Background'
 
 export default function Nomatch() {
   return (
     <div class="stars">
       <div class="central-body">
         <div>
+        <Background />
           <img
             class="image-404"
             src="http://salehriaz.com/404Page/img/404.svg"
@@ -44,13 +46,13 @@ export default function Nomatch() {
           />
         </div>
       </div>
-      <div class="glowing_stars">
+      {/* <div class="glowing_stars">
         <div class="star"></div>
         <div class="star"></div>
         <div class="star"></div>
         <div class="star"></div>
         <div class="star"></div>
-      </div>
+      </div> */}
     </div>
   )
 }
