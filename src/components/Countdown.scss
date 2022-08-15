@@ -18,7 +18,7 @@ $Very-dark-blue: hsl(235, 16%, 14%);
 $Very-dark-blue1: hsl(234, 17%, 12%);
 
 .Container--CountDown {
-  width: 600px;
+  // width: 600px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ $Very-dark-blue1: hsl(234, 17%, 12%);
     width: 100%;
     max-width: 690px;
     height: 80%;
-    padding: 20px;
+    // padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,6 +123,6 @@ $Very-dark-blue1: hsl(234, 17%, 12%);
 }
 @media screen and (max-width: 820px) {
   .Container--CountDown {
-    width: 330px;
+    width: 100%;
   }
 }
