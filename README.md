@@ -69,6 +69,10 @@ Dominik
 - Resolving merge conflicts
 - Project direction
 
+Kevin
+- Created functionality and styling for Homepage
+- Styled 404 page
+
 Linfeng Chen
 -Dealing with SpaceX API, NASA API
 -Epic page
